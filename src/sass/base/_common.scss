@@ -1,0 +1,40 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+// html {
+//     scroll-behavior: smooth;
+// }
+
+body {
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+    color: var(--primary-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
