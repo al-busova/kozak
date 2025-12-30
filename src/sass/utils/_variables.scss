@@ -1,8 +1,7 @@
-:root {
-    --primary-text-color: #000;
-    --accent-color: #F7931E;
-    --add-textcolor: #0C1417;
-    --primary-font-family:  'Montserrat', sans-serif;;
-    --primary-font-size: 16px;
-    --timing-fun: cubic-bezier(0.4, 0, 0.2, 1);
-}
+$primary-text-color: #000;
+$accent-color: #f7931e;
+$add-textcolor: #0c1417;
+$white: #fff;
+$primary-font-family: 'Montserrat', sans-serif;
+$primary-font-size: 16px;
+$timing-fun: cubic-bezier(0.4, 0, 0.2, 1);

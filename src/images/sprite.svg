@@ -1,24 +1,26 @@
-<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"
+    version="1.1"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="icon-cross" viewBox="0 0 32 32">
-            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter"
-                stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556" d="M1.778 30.221l28.444-28.444">
+            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)"
+                stroke-linejoin="miter"
+                stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556"
+                d="M1.778 30.221l28.444-28.444">
             </path>
-            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter"
-                stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556" d="M30.222 30.221l-28.444-28.444">
+            <path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)"
+                stroke-linejoin="miter"
+                stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.5556"
+                d="M30.222 30.221l-28.444-28.444">
             </path>
         </symbol>
-        <symbol id="icon-menu" viewBox="0 0 48 32">
-            <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714"
-                d="M0 2.286h46.857"></path>
-            <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714"
-                d="M0 16h46.857"></path>
-            <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714"
-                d="M0 29.714h46.857"></path>
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+            <path
+                d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
         </symbol>
         <symbol id="icon-phone" viewBox="0 0 32 32">
-            <path fill="none" stroke="#f7931e" style="stroke: var(--color1, #f7931e)" stroke-linejoin="round"
+            <path fill="none" stroke="#f7931e" style="stroke: var(--color1, #f7931e)"
+                stroke-linejoin="round"
                 stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667"
                 d="M30.545 23.156v4.364c0.002 0.405-0.081 0.806-0.244 1.177s-0.4 0.704-0.699 0.978-0.651 0.482-1.035 0.612c-0.384 0.13-0.79 0.178-1.194 0.141-4.476-0.486-8.775-2.016-12.553-4.465-3.514-2.233-6.494-5.213-8.727-8.727-2.458-3.795-3.988-8.115-4.465-12.611-0.036-0.402 0.011-0.808 0.14-1.19s0.336-0.734 0.608-1.033c0.272-0.298 0.604-0.537 0.973-0.7s0.769-0.248 1.173-0.248h4.364c0.706-0.007 1.39 0.243 1.925 0.703s0.885 1.099 0.984 1.798c0.185 1.396 0.525 2.768 1.018 4.087 0.196 0.521 0.238 1.086 0.122 1.63s-0.386 1.043-0.777 1.439l-1.847 1.847c2.071 3.642 5.086 6.657 8.727 8.727l1.847-1.847c0.395-0.391 0.895-0.661 1.439-0.777s1.11-0.074 1.63 0.122c1.319 0.493 2.691 0.833 4.087 1.018 0.707 0.1 1.352 0.456 1.813 1s0.706 1.239 0.689 1.953z">
             </path>
