@@ -6,6 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .btn-menu {
   display: flex;
@@ -28,13 +32,21 @@
   fill: $white;
 }
 .container_mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
-  padding-top: 30px;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+    padding-top: 30px;
+  }
+  @media screen and (max-width: 1439px) and (min-width: 768px) {
+    order: 1;
+    flex-basis: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+  }
 }
 
 .container_mobile.is-open {
@@ -50,16 +62,19 @@
   justify-content: space-between;
   padding: 0 15px;
   margin-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .mobile-menu-btn-close {
-  // position: absolute;
-  // top: 30px;
-  // right: 15px;
   @extend .btn-menu;
 }
 .navigation {
   background-color: black;
   padding: 15px 0;
+  @media screen and (min-width: 768px) {
+    background-color: transparent;
+  }
 }
 .navigation__wrapper {
   padding: 0 15px;
@@ -67,9 +82,33 @@
   flex-direction: column;
   height: 91px;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    height: auto;
+    flex-direction: row;
+    gap: 35px;
+    justify-content: center;
+  }
 }
-.navigation__link {
+.navigation__item:last-child {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.navigation__link,
+.contacts__number-tel {
   color: $white;
+  font-family: $primary-font-family;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+.contacts__number-tel {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }

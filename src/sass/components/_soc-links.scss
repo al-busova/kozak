@@ -1,0 +1,11 @@
+.soc-links {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.soc-links__icon {
+  fill: $white;
+}
+.soc-links__icon--accent {
+  fill: $accent-color;
+}

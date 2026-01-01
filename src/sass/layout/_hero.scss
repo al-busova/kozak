@@ -1,0 +1,103 @@
+.top-site {
+  background: url('../images/decor/frame_header-min.png'),
+    url(../images/decor/frame_hero-min.png),
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+    url('../images/bg/hero_mob.jpg');
+  background-position: top center, left -14px bottom -54px, center, top center;
+  background-size: 91px, 160px, cover, cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    background: url('../images/decor/frame_header-min.png'),
+      url('../images/decor/frame_hero-min.png'),
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+      url('../images/bg/hero_tab.jpg');
+    background-position: top right 30vw, left bottom -54px, center, top center;
+    background-size: 100px, 190px, cover, cover;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-width: 1440px) {
+    background: url('../images/decor/frame_header-min.png'),
+      url('../images/decor/frame_hero-min.png'),
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+      url('../images/bg/hero_desk.jpg');
+    background-position: top right 20vw, left bottom -74px, center, top center;
+    background-size: 150px, 270px, cover, cover;
+    background-repeat: no-repeat;
+  }
+}
+.hero-section {
+  padding: 146px 0 50px;
+  font-family: $primary-font-family;
+  color: $white;
+  text-align: center;
+  @media screen and (min-width: 1440px) {
+    padding-top: 190px;
+  }
+}
+.main-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.42;
+  margin-bottom: 23px;
+  > span {
+    display: block;
+    font-size: 48px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 58px;
+    line-height: 1.17;
+    margin-bottom: 35px;
+    > span {
+      font-size: 66px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 64px;
+    line-height: 1.06;
+    > span {
+      font-size: 72px;
+    }
+  }
+}
+.hero__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+}
+.hero__btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: $white;
+  margin-bottom: 122px;
+  background-color: transparent;
+  border: none;
+  padding: 20px 28px 28px;
+  background-image: url(../images/decor/bg_button-min.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 259px;
+  }
+}
+.hero__btn-arrow {
+  width: 15px;
+  height: 15px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: -14px;
+  background-color: transparent;
+  border-left: 1.5px;
+  border-top: 1.5px;
+  border-color: $accent-color;
+  transform: rotate(45deg);
+}
