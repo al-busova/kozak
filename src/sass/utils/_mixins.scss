@@ -1,14 +1,17 @@
 @mixin flex($gap, $direction, $justify-content) {
-	display: flex;
-	align-items: center;
-	justify-content: $justify-content;
-	gap: $gap;
-    flex-direction: $direction;
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  gap: $gap;
+  flex-direction: $direction;
 }
 @mixin border($width, $color) {
-	border: $width solid $color;
-    border-radius: 10px;
+  border: $width solid $color;
+  border-radius: 10px;
 }
+
 @mixin flex-basis($gap, $count-items) {
-		flex-basis: calc((100% - $gap * (#{$count-items} - 1)) / #{$count-items});
+  flex-basis: calc(
+    (100% - (#{$gap} * (#{$count-items} - 1))) / #{$count-items}
+  );
 }

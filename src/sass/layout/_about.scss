@@ -1,3 +1,124 @@
 .about {
   padding: 90px 0 80px;
+  @media screen and (min-width: 768px) {
+    padding: 73px 0 90px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 100px 0;
+  }
+}
+.about__top {
+  @media screen and (min-width: 1440px) {
+    @include flex(76px, row-reverse, center);
+  }
+}
+.about__wrapper-text {
+  @media screen and (min-width: 1440px) {
+    max-width: 450px;
+  }
+}
+.about__text {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63;
+  color: $white;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1440px) {
+    text-align: left;
+  }
+}
+.about__btn {
+  display: block;
+  padding: 20px 33px;
+  width: 100%;
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    margin: 0 auto 60px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+  }
+}
+.about__btn::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  content: '';
+  width: 95%;
+  height: 95%;
+  border: 1px solid $white;
+  transform: skewX(-15deg) translate(-50%, -47%);
+}
+.about__wrapper-images {
+  @include flex(30px, column, center);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1440px) {
+    picture:nth-of-type(2) {
+      position: relative;
+      left: 0;
+      top: 40px;
+    }
+  }
+}
+.advantages__list {
+  margin-top: 80px;
+  @include flex(60px, column, center);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 90px;
+  }
+  @media screen and (min-width: 1440px) {
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+    margin-top: 140px;
+  }
+}
+.advantages__item {
+  flex-basis: 233px;
+  @media screen and (min-width: 1440px) {
+    @include flex-basis(40px, 4);
+    @include flex(25px, row, left);
+  }
+  &:nth-child(3) {
+    position: relative;
+    top: 0;
+    left: -25px;
+  }
+}
+.advantages__icon {
+  display: block;
+  margin: 0 auto 15px;
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+  }
+}
+.advantages__text {
+  font-family: $primary-font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  @media screen and (min-width: 1440px) {
+    text-align: left;
+  }
 }
