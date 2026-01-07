@@ -94,15 +94,20 @@
   }
 }
 .advantages__item {
-  flex-basis: 233px;
+  @media screen and (max-width: 767px) {
+    max-width: 233px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: 233px;
+  }
   @media screen and (min-width: 1440px) {
     @include flex-basis(40px, 4);
     @include flex(25px, row, left);
-  }
-  &:nth-child(3) {
-    position: relative;
-    top: 0;
-    left: -25px;
+    &:nth-child(3) {
+      position: relative;
+      top: 0;
+      left: -25px;
+    }
   }
 }
 .advantages__icon {
