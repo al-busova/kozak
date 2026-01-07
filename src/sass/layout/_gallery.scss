@@ -1,8 +1,17 @@
+.gallery {
+  padding-bottom: 83px;
+  background: url('../images/decor/frame_gallery-min.png');
+  background-position: left bottom -26px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+}
+
 .embla {
   max-width: 100%;
 }
 
-.embla__viewport {
+.embla__viewport,
+.embla__viewport--2 {
   overflow: hidden;
 }
 
@@ -15,6 +24,9 @@
   width: 200px;
   margin-right: 30px;
   overflow: hidden;
+}
+.embla__viewport--2 .embla__slide {
+  width: 225px;
 }
 
 .embla__slide img {
