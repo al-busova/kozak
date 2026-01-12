@@ -1,31 +1,77 @@
 .subscriptions {
   background-color: $white;
-  color: black;
+  color: $add-textcolor;
+  padding: 80px 0;
+  position: relative;
+}
+.subscriptions__thead-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(12, 20, 23, 0.5);
+  top: 223px;
+  z-index: 100;
+  overflow-x: hidden;
 }
 .subscriptions__table-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 15px;
+  scrollbar-width: none;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @media screen and (min-width: 1440px) {
     overflow: visible;
   }
 }
+.subscriptions-scrollbar {
+  position: relative;
+  height: 10px;
+  margin-top: 16px;
+  user-select: none;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.subscriptions-scrollbar__track {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: $add-textcolor;
+}
+
+.subscriptions-scrollbar__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 102px;
+  background-color: $accent-color;
+  touch-action: none;
+  cursor: grab;
+  transition: transform 0.1s linear;
+  &:active {
+    cursor: grabbing;
+  }
+}
+
 .subscriptions__simple-table {
   width: 100%;
   border-collapse: collapse;
   min-width: 700px; // важно! иначе нечего скроллить
-
-  th,
-  td {
-    padding: 12px;
-    background: #fff;
+  tbody th {
+    padding: 32px 0 12px;
   }
-
-  th {
-    font-weight: 600;
-    text-align: left;
+  thead th {
+    padding: 15px;
   }
-
   // 👇 фиксируем первый столбец
   th:first-child,
   td:first-child {
@@ -33,11 +79,37 @@
     left: 0;
     z-index: 2;
     background: #fff;
-    box-shadow: 2px 0 0 rgba(0, 0, 0, 0.05);
+    text-align: left;
   }
 
   // 👇 чтобы заголовок был выше остальных
   thead th {
     z-index: 3;
   }
+  td {
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: $add-textcolor;
+  }
+}
+.subscriptions__subtitle {
+  font-family: $primary-font-family;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  width: 150px;
+}
+.subscriptions__subtitle--first {
+  font-weight: 500;
+}
+.subscriptions__text-left {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $add-textcolor;
 }
