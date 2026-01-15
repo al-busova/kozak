@@ -1,49 +1,77 @@
 import EmblaCarousel from 'embla-carousel';
 
-function initEmbla({ viewport, track, thumb, options = {} }) {
-  const emblaNode = document.querySelector(viewport);
-  const progressTrack = document.querySelector(track);
-  const progressThumb = document.querySelector(thumb);
+function initEmbla({ viewport, track, thumb }) {
+  const viewportEl = document.querySelector(viewport);
+  const trackEl = document.querySelector(track);
+  const thumbEl = document.querySelector(thumb);
+  // trackEl.offsetWidth === 0;
+  if (!viewportEl || !trackEl || !thumbEl) return;
 
-  if (!emblaNode || !progressTrack || !progressThumb) return;
-
-  const embla = EmblaCarousel(emblaNode, {
-    align: 'start',
-    containScroll: 'trimSnaps',
+  const embla = EmblaCarousel(viewportEl, {
     dragFree: false,
     loop: false,
-    ...options,
+    containScroll: 'trimSnaps',
   });
 
-  const onWheel = e => {
-    const canScrollPrev = embla.canScrollPrev();
-    const canScrollNext = embla.canScrollNext();
+  /* ---------------- sync FROM embla ---------------- */
 
-    if ((e.deltaY < 0 && !canScrollPrev) || (e.deltaY > 0 && !canScrollNext)) {
-      return;
-    }
+  const syncThumbFromEmbla = () => {
+    const max = trackEl.offsetWidth - thumbEl.offsetWidth;
 
+    thumbEl.style.left = max * embla.scrollProgress() + 'px';
+  };
+
+  embla.on('init', syncThumbFromEmbla);
+  embla.on('resize', syncThumbFromEmbla);
+  embla.on('select', syncThumbFromEmbla);
+
+  /* ---------------- thumb drag ---------------- */
+
+  let isDragging = false;
+  let offsetX = 0;
+
+  const maxLeft = () => trackEl.offsetWidth - thumbEl.offsetWidth;
+
+  const onMove = e => {
+    if (!isDragging) return;
+
+    const trackRect = trackEl.getBoundingClientRect();
+    let left = e.clientX - trackRect.left - offsetX;
+
+    left = Math.max(0, Math.min(maxLeft(), left));
+    thumbEl.style.left = left + 'px';
+  };
+
+  const stopDrag = () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    thumbEl.classList.remove('is-dragging');
+
+    const progress = parseFloat(thumbEl.style.left) / maxLeft();
+
+    embla.scrollToProgress(progress);
+
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', stopDrag);
+  };
+
+  thumbEl.addEventListener('mousedown', e => {
     e.preventDefault();
-    e.deltaY > 0 ? embla.scrollNext() : embla.scrollPrev();
-  };
+    isDragging = true;
 
-  const updateProgress = () => {
-    const progress = embla.scrollProgress(); // 0 → 1
-    const trackWidth = progressTrack.offsetWidth;
-    const thumbWidth = progressThumb.offsetWidth;
-    const maxTranslate = trackWidth - thumbWidth;
+    const rect = thumbEl.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
 
-    progressThumb.style.transform = `translateX(${maxTranslate * progress}px)`;
-  };
+    thumbEl.classList.add('is-dragging');
 
-  emblaNode.addEventListener('wheel', onWheel, { passive: false });
-
-  embla.on('scroll', updateProgress);
-  embla.on('resize', updateProgress);
-  embla.on('init', updateProgress);
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', stopDrag);
+  });
 
   return embla;
 }
+
 export default initEmbla;
 
 // import Siema from 'siema';

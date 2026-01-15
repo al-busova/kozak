@@ -1,0 +1,44 @@
+.one-time {
+  background-color: #fff;
+  color: $add-textcolor;
+  & .section-title {
+    margin-bottom: 45px;
+  }
+}
+.one-time__list {
+  @include flex(30px, column, center);
+}
+.one-time__card {
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.08);
+  padding: 30px 47px;
+}
+.one-time__subtitle {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: $add-textcolor;
+  margin-bottom: 38px;
+}
+.one-time__time-box {
+  @include flex(25px, row, center);
+  margin-bottom: 50px;
+}
+.one-time__time {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.33;
+  text-align: center;
+  color: rgba(12, 20, 23, 0.5);
+}
+.one-time__price {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+  color: inherit;
+  margin-bottom: 15px;
+}
