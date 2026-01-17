@@ -1,44 +1,119 @@
 .one-time {
   background-color: #fff;
   color: $add-textcolor;
+  padding-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 90px;
+  }
   & .section-title {
     margin-bottom: 45px;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1440px) {
+      text-align: center;
+    }
   }
 }
 .one-time__list {
   @include flex(30px, column, center);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 .one-time__card {
   box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.08);
-  padding: 30px 47px;
+  padding: 30px 32px;
+  height: 372px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover .one-time__btn,
+  &:focus-within .one-time__btn {
+    background-color: $accent-color;
+    color: $white;
+  }
+  &:hover .one-time__subtitle,
+  &:focus-within .one-time__subtitle {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    @include flex-basis(30px, 3);
+    padding: 30px 14px;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-basis: 308px;
+    padding: 30px 20px;
+  }
 }
 .one-time__subtitle {
-  font-family: $primary-font-family;
-  font-weight: 700;
-  font-size: 16px;
   line-height: 1.5;
-  text-align: center;
-  color: $add-textcolor;
-  margin-bottom: 38px;
+  transition: color 0.3s;
 }
 .one-time__time-box {
   @include flex(25px, row, center);
-  margin-bottom: 50px;
+  @media screen and (min-width: 1440px) {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+.one-time__card:last-child {
+  & .one-time__time-box {
+    gap: 15px;
+    @media screen and (min-width: 1440px) {
+      gap: 10px;
+    }
+  }
+  & .one-time__time {
+    max-width: 149px;
+    @media screen and (min-width: 1440px) {
+      max-width: 100%;
+    }
+  }
 }
 .one-time__time {
-  font-family: $primary-font-family;
-  font-weight: 400;
+  font-size: 15px;
+  color: rgba(12, 20, 23, 0.5);
+}
+.one-time__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+.one-time__one {
   font-size: 15px;
   line-height: 1.33;
   text-align: center;
   color: rgba(12, 20, 23, 0.5);
-}
-.one-time__price {
-  font-family: $primary-font-family;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.25;
-  text-align: center;
-  color: inherit;
   margin-bottom: 15px;
+}
+.one-time__btn {
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $accent-color;
+  background-color: transparent;
+  border: none;
+  padding: 15px 47px;
+  outline: 1px solid $accent-color;
+  outline-offset: -2px;
+  transform: skewX(-15deg);
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+  span {
+    display: inline-block;
+    transform: skewX(15deg);
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
