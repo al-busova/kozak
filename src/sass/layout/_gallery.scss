@@ -36,6 +36,11 @@
   display: block;
   object-fit: cover;
 }
+.embla__slide .trainers__img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
 .embla-progress {
   margin-top: 30px;
   width: 100%;
@@ -47,7 +52,8 @@
 }
 
 .embla-progress__track,
-.embla-progress__track--2 {
+.embla-progress__track--2,
+.embla-progress__track--3 {
   position: relative;
   width: 100%;
   height: 4px;
@@ -55,9 +61,10 @@
 }
 
 .embla-progress__thumb,
-.embla-progress__thumb--2 {
+.embla-progress__thumb--2,
+.embla-progress__thumb--3 {
   background: $accent-color;
-  // transition: left 0.2s ease;
+  transition: left 0.2s ease;
   position: absolute;
   top: -4px;
   left: 0;
@@ -72,8 +79,10 @@
 }
 .embla__btn--prev,
 .embla__btn--prev-2,
+.embla__btn--prev-3,
 .embla__btn--next,
-.embla__btn--next-2 {
+.embla__btn--next-2,
+.embla__btn--next-3 {
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;

@@ -1,26 +1,163 @@
 <section class="trainers">
-    <div class="container">
-        <h2>Тренери</h2>
-        слайдер з тренерами
-        <ul class="list">
-            <li>
-                фото
-                <b>Ілля Панченко</b>
-            <p>Персоналтний тренер, інструктор тренажерної зали</p>
-            <p>Досвід роботи - 4 роки</p>
-            </li>
-        <li>
-            фото
-            <b>Юлія Білоус</b>
-            <p>Фітнес-тренер</p>
-            <p>Досвід роботи - 2 роки</p>
-        </li>
-        <li>
-            фото
-            <b>Єкатерина Петренко</b>
-            <p>Фітнес-тренер</p>
-            <p>Досвід роботи - 4 роки</p>
-        </li>
+  <div class="container">
+    <h2>Тренери</h2>
+    <div class="embla">
+      <button class="embla__btn embla__btn--prev-3">‹</button>
+      <div class="embla__viewport--3">
+        <ul class="embla__container list">
+          <li class="embla__slide">
+            <div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/content/trainer1_desk.webp    1x,
+                    ./images/content/trainer1_desk@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer1_desk.jpg    1x,
+                    ./images/content/trainer1_desk@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer1_desk.webp    1x,
+                    ./images/content/trainer1_desk@2x.webp 2x
+                  "
+                  sizes="”250px”"
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer1_desk.jpg    1x,
+                    ./images/content/trainer1_desk@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  sizes="”250px”"
+                />
+                <img
+                  class="trainers__img"
+                  src="./images/content/trainer1_desk.jpg"
+                  alt="boy sport"
+                />
+              </picture>
+              <h3 class="trainers__name">Ілля Панченко</h3>
+              <p class="trainers__post">Персональний тренер</p>
+              <p class="trainers__post">Інструктор тренажерної зали</p>
+              <p class="trainers__experience">Досвід роботи - 4 роки</p>
+            </div>
+          </li>
+          <li class="embla__slide">
+            <div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/content/trainer2_desk.webp    1x,
+                    ./images/content/trainer2_desk@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer2_desk.jpg    1x,
+                    ./images/content/trainer2_desk@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer2_desk.webp    1x,
+                    ./images/content/trainer2_desk@2x.webp 2x
+                  "
+                  sizes="”250px”"
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer2_desk.jpg    1x,
+                    ./images/content/trainer2_desk@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  sizes="”250px”"
+                />
+                <img
+                  class="trainers__img"
+                  src="./images/content/trainer2_desk.jpg"
+                  alt="girl sport"
+                />
+              </picture>
+              <h3 class="trainers__name">Юлія Білоус</h3>
+              <p class="trainers__post">Фітнес-тренер</p>
+              <p class="trainers__experience">Досвід роботи - 2 роки</p>
+            </div>
+          </li>
+          <li class="embla__slide">
+            <div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/content/trainer3_desk.webp    1x,
+                    ./images/content/trainer3_desk@2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer3_desk.jpg    1x,
+                    ./images/content/trainer3_desk@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  sizes="”307px”"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer3_desk.webp    1x,
+                    ./images/content/trainer3_desk@2x.webp 2x
+                  "
+                  sizes="”250px”"
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/content/trainer3_desk.jpg    1x,
+                    ./images/content/trainer3_desk@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                  sizes="”250px”"
+                />
+                <img
+                  class="trainers__img"
+                  src="./images/content/trainer3_desk.jpg"
+                  alt="girl sport"
+                />
+              </picture>
+              <h3 class="trainers__name">Єкатерина Петренко</h3>
+              <p class="trainers__post">Фітнес-тренер</p>
+              <p class="trainers__experience">Досвід роботи - 4 роки</p>
+            </div>
+          </li>
         </ul>
+      </div>
+      <button class="embla__btn embla__btn--next-3">›</button>
     </div>
+    <div class="embla-progress">
+      <div class="embla-progress__track--3">
+        <div class="embla-progress__thumb--3"></div>
+      </div>
+    </div>
+  </div>
 </section>

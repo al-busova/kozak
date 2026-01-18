@@ -1,0 +1,13 @@
+.contacts {
+  padding: 50px 0;
+  & .section-title {
+    margin-bottom: 55px;
+  }
+}
+.contacts__list {
+  @include flex(30px, column, flex-start);
+  align-items: flex-start;
+}
+.contacts__item {
+  @include flex(16px, row, flex-start);
+}

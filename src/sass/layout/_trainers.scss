@@ -1,0 +1,24 @@
+.trainers {
+  padding: 80px 0;
+}
+
+.trainers__name {
+  font-family: $primary-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  margin: 20px 0 15px;
+}
+.trainers__post,
+.trainers__experience {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133%;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+}
+.trainers__experience {
+  margin-bottom: 0;
+}

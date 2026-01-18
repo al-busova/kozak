@@ -21,5 +21,12 @@ initEmbla({
   prevBtn: '.embla__btn--prev-2',
   nextBtn: '.embla__btn--next-2',
 });
+initEmbla({
+  viewport: '.embla__viewport--3',
+  track: '.embla-progress__track--3',
+  thumb: '.embla-progress__thumb--3',
+  prevBtn: '.embla__btn--prev-3',
+  nextBtn: '.embla__btn--next-3',
+});
 initTableScrollbar();
 // document.querySelectorAll('.subscriptions').forEach(initCustomScrollbar);
