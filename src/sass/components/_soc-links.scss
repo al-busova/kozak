@@ -1,9 +1,11 @@
 .soc-links {
   display: flex;
   gap: 15px;
+}
+.soc-links--right {
   justify-content: flex-end;
 }
-.soc-links__icon {
+.soc-links__icon--white {
   fill: $white;
 }
 .soc-links__icon--accent {
