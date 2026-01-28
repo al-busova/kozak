@@ -1,0 +1,31 @@
+.footer {
+  background-color: #000;
+  padding: 45px 0;
+  text-align: center;
+  > .container {
+    @media screen and (min-width: 768px) {
+      position: relative;
+      padding: 0 150px;
+    }
+    @media screen and (min-width: 1440px) {
+      padding: 0 250px;
+    }
+  }
+}
+.footer__text {
+  font-family: $primary-font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+  @media screen and (min-width: 1440px) {
+    display: inline-block;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
