@@ -64,6 +64,16 @@
     line-height: 1.5;
   }
 }
+.contacts__item:not(:nth-child(2)) {
+  .contacts__text {
+    padding: 5px;
+    transition: color 300ms $timing-fun;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
 .contacts__text-sing {
   font-weight: 500;
   margin-bottom: 20px;

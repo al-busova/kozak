@@ -1,7 +1,102 @@
 .consultation {
   padding: 80px 0;
   background-image: url('../images/bg/contacts-form_mob.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/bg/contacts-form_tab.jpg');
+  }
+  @media screen and (min-width: 1440px) {
+    background-image: url('../images/bg/contacts-form_desk.jpg');
+  }
+}
+.consultation__form {
+  @media screen and (min-width: 768px) {
+    width: 350px;
+    margin-left: auto;
+  }
+}
+.consultation__title {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+.consultation__text {
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+  > span {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+.consultation__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding-bottom: 15px;
+  color: white;
+  &:first-of-type {
+    margin-bottom: 25px;
+  }
+  &::placeholder {
+    font-size: 15px;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    border-bottom: 1px solid $accent-color;
+  }
+  &:hover::placeholder,
+  &:focus::placeholder,
+  &:active::placeholder {
+    color: $accent-color;
+  }
+}
+.consultation__btn {
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  padding: 15px 40px;
+  outline: 1px solid $white;
+  outline-offset: -2px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transform: skewX(-15deg);
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    outline-color 300ms;
+  span {
+    display: inline-block;
+    transform: skewX(15deg);
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline-color: $accent-color;
+    color: $accent-color;
+  }
+}
+.consultation__add-text {
+  font-size: 13px;
+  line-height: 1.43;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
 }

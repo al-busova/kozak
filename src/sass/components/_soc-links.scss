@@ -2,12 +2,22 @@
   display: flex;
   gap: 15px;
 }
+.soc-links__link:hover .soc-links__icon--white,
+.soc-links__link:focus .soc-links__icon--white {
+  fill: $accent-color;
+}
+.soc-links__link:hover .soc-links__icon--accent,
+.soc-links__link:focus .soc-links__icon--accent {
+  fill: $white;
+}
 .soc-links--right {
   justify-content: flex-end;
 }
 .soc-links__icon--white {
   fill: $white;
+  transition: fill 300ms $timing-fun;
 }
 .soc-links__icon--accent {
   fill: $accent-color;
+  transition: fill 300ms $timing-fun;
 }
