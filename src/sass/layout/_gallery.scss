@@ -4,15 +4,30 @@
   background-position: left bottom -26px;
   background-size: 70px;
   background-repeat: no-repeat;
+  & .section-title {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .embla {
   max-width: 100%;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .embla__viewport,
-.embla__viewport--2 {
+.embla__viewport--2,
+.embla__viewport--3 {
   overflow: hidden;
+  @media screen and (min-width: 1440px) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
 
 .embla__container {
@@ -24,17 +39,38 @@
   width: 200px;
   margin-right: 30px;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    width: 306px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 267px;
+  }
 }
 .embla__viewport--2 .embla__slide {
   width: 225px;
+  @media screen and (min-width: 768px) {
+    width: 422px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 361px;
+  }
 }
 
-.embla__slide img {
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  margin: -2px;
+.embla__slide .gallery__img {
+  @media screen and (max-width: 767px) {
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    margin: -2px;
+    display: block;
+    object-fit: cover;
+  }
+  width: 100%;
+  height: auto;
+}
+.embla__slide .gallery__img_g {
   display: block;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 .embla__slide .trainers__img {
   width: 100%;
@@ -48,6 +84,9 @@
   display: block;
   &:nth-child(3) {
     margin-bottom: 48px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -58,6 +97,13 @@
   width: 100%;
   height: 4px;
   background: $white;
+  @media screen and (min-width: 768px) {
+    width: 482px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1000px;
+  }
 }
 
 .embla-progress__thumb,
@@ -65,6 +111,7 @@
 .embla-progress__thumb--3 {
   background: $accent-color;
   transition: left 0.2s ease;
+  will-change: left;
   position: absolute;
   top: -4px;
   left: 0;
@@ -74,7 +121,11 @@
   user-select: none;
   touch-action: none;
   &.is-dragging {
+    transition: none;
     cursor: grabbing;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 200px;
   }
 }
 .embla__btn--prev,
@@ -86,6 +137,31 @@
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+  &:not(:disabled):not(.is-disabled):hover .embla__icon-arrow,
+  &:not(:disabled):not(.is-disabled):focus-visible .embla__icon-arrow {
+    fill: $accent-color;
+  }
+}
+.embla__icon-arrow {
+  fill: white;
+  transition: fill 0.2s ease;
+}
+.embla__btn--next,
+.embla__btn--next-2,
+.embla__btn--next-3 {
+  & .embla__icon-arrow {
+    transform: rotate(180deg);
   }
 }
 // .siema {

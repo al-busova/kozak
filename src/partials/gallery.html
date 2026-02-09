@@ -2,24 +2,155 @@
   <div class="container">
     <h2 class="section-title">Галерея</h2>
     <div class="embla">
-      <button class="embla__btn embla__btn--prev">‹</button>
+      <button class="embla__btn embla__btn--prev">
+        <svg class="embla__icon-arrow" width="40" height="40">
+          <use href=".//images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
       <div class="embla__viewport">
         <ul class="embla__container list">
           <li class="embla__slide">
-            <img src="./images/content/gallery_person1.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_person1.webp    268w,
+                  ./images/content/gallery_person1@2x.webp 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_person1.jpg    268w,
+                  ./images/content/gallery_person1@2x.jpg 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <img
+                class="gallery__img"
+                src="./images/content/gallery_person1.jpg"
+                alt="person"
+              />
+            </picture>
           </li>
           <li class="embla__slide">
-            <img src="./images/content/gallery_person2.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_person2.webp    268w,
+                  ./images/content/gallery_person2@2x.webp 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_person2.jpg    268w,
+                  ./images/content/gallery_person2@2x.jpg 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <img
+                class="gallery__img"
+                src="./images/content/gallery_person2.jpg"
+                alt="person"
+              />
+            </picture>
           </li>
           <li class="embla__slide">
-            <img src="./images/content/gallery_person3.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_person3.webp    268w,
+                  ./images/content/gallery_person3@2x.webp 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_person3.jpg    268w,
+                  ./images/content/gallery_person3@2x.jpg 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <img
+                class="gallery__img"
+                src="./images/content/gallery_person3.jpg"
+                alt="person"
+              />
+            </picture>
           </li>
           <li class="embla__slide">
-            <img src="./images/content/gallery_person4.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_person4.webp    268w,
+                  ./images/content/gallery_person4@2x.webp 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_person4.jpg    268w,
+                  ./images/content/gallery_person4@2x.jpg 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <img
+                class="gallery__img"
+                src="./images/content/gallery_person4.jpg"
+                alt="person"
+              />
+            </picture>
+          </li>
+          <li class="embla__slide">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_person4.webp    268w,
+                  ./images/content/gallery_person4@2x.webp 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_person4.jpg    268w,
+                  ./images/content/gallery_person4@2x.jpg 354w
+                "
+                sizes="(min-width: 1440px) 267px, (min-width: 768px) 306px, 200px"
+              />
+
+              <img
+                class="gallery__img"
+                src="./images/content/gallery_person4.jpg"
+                alt="person"
+              />
+            </picture>
           </li>
         </ul>
       </div>
-      <button class="embla__btn embla__btn--next">›</button>
+      <button class="embla__btn embla__btn--next">
+        <svg class="embla__icon-arrow" width="40" height="40">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
     </div>
     <div class="embla-progress">
       <div class="embla-progress__track">
@@ -27,21 +158,123 @@
       </div>
     </div>
     <div class="embla">
-      <button class="embla__btn embla__btn--prev-2">‹</button>
+      <button class="embla__btn embla__btn--prev-2">
+        <svg class="embla__icon-arrow" width="40" height="40">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
       <div class="embla__viewport--2">
         <ul class="embla__container list">
           <li class="embla__slide">
-            <img src="./images/content/gallery_gym1.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_gym1.webp    362w,
+                  ./images/content/gallery_gym1@2x.webp 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_gym1.jpg    362w,
+                  ./images/content/gallery_gym1@2x.jpg 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+
+              <img
+                class="gallery__img_g"
+                src="./images/content/gallery_gym1.jpg"
+                alt="gym"
+              />
+            </picture>
           </li>
           <li class="embla__slide">
-            <img src="./images/content/gallery_gym2.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_gym2.webp    362w,
+                  ./images/content/gallery_gym2@2x.webp 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_gym2.jpg    362w,
+                  ./images/content/gallery_gym2@2x.jpg 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+              <img
+                class="gallery__img_g"
+                src="./images/content/gallery_gym2.jpg"
+                alt="gym"
+              />
+            </picture>
           </li>
           <li class="embla__slide">
-            <img src="./images/content/gallery_gym3.jpg" alt="" />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_gym3.webp    362w,
+                  ./images/content/gallery_gym3@2x.webp 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_gym3.jpg    362w,
+                  ./images/content/gallery_gym3@2x.jpg 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+
+              <img
+                class="gallery__img_g"
+                src="./images/content/gallery_gym3.jpg"
+                alt="gym"
+              />
+            </picture>
+          </li>
+          <li class="embla__slide">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  ./images/content/gallery_gym3.webp    362w,
+                  ./images/content/gallery_gym3@2x.webp 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+              <source
+                type="image/jpeg"
+                srcset="
+                  ./images/content/gallery_gym3.jpg    362w,
+                  ./images/content/gallery_gym3@2x.jpg 724w
+                "
+                sizes="(min-width: 1440px) 361px, (min-width: 768px) 422px, 225px"
+              />
+
+              <img
+                class="gallery__img_g"
+                src="./images/content/gallery_gym3.jpg"
+                alt="gym"
+              />
+            </picture>
           </li>
         </ul>
       </div>
-      <button class="embla__btn embla__btn--next-2">›</button>
+      <button class="embla__btn embla__btn--next-2">
+        <svg class="embla__icon-arrow" width="40" height="40">
+          <use href="./images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
     </div>
     <div class="embla-progress">
       <div class="embla-progress__track--2">
