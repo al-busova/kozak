@@ -1,6 +1,7 @@
 .gallery {
   padding-bottom: 83px;
-  background: url('../images/decor/frame_gallery-min.png');
+  background-color: $add-textcolor;
+  background-image: url('../images/decor/frame_gallery-min.png');
   background-position: left bottom -26px;
   background-size: 70px;
   background-repeat: no-repeat;

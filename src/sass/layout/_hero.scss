@@ -1,27 +1,42 @@
 .top-site {
-  background: url('../images/decor/frame_header-min.png'),
+  background:
+    url('../images/decor/frame_header-min.png'),
     url(../images/decor/frame_hero-min.png),
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
     url('../images/bg/hero_mob.jpg');
-  background-position: top center, left -14px bottom -54px, center, top center;
+  background-position:
+    top center,
+    left -14px bottom -54px,
+    center,
+    top center;
   background-size: 91px, 160px, cover, cover;
   background-repeat: no-repeat;
   overflow: hidden;
   @media screen and (min-width: 768px) {
-    background: url('../images/decor/frame_header-min.png'),
+    background:
+      url('../images/decor/frame_header-min.png'),
       url('../images/decor/frame_hero-min.png'),
       linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
       url('../images/bg/hero_tab.jpg');
-    background-position: top right 30vw, left bottom -54px, center, top center;
+    background-position:
+      top right 30vw,
+      left bottom -54px,
+      center,
+      top center;
     background-size: 100px, 190px, cover, cover;
     background-repeat: no-repeat;
   }
   @media screen and (min-width: 1440px) {
-    background: url('../images/decor/frame_header-min.png'),
+    background:
+      url('../images/decor/frame_header-min.png'),
       url('../images/decor/frame_hero-min.png'),
       linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
       url('../images/bg/hero_desk.jpg');
-    background-position: top right 20vw, left bottom -74px, center, top center;
+    background-position:
+      top right 20vw,
+      left bottom -74px,
+      center,
+      top center;
     background-size: 150px, 270px, cover, cover;
     background-repeat: no-repeat;
   }
@@ -96,6 +111,7 @@
   position: relative;
   bottom: -14px;
   background-color: transparent;
+  border-style: solid;
   border-left: 1.5px;
   border-top: 1.5px;
   border-color: $accent-color;

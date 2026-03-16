@@ -2,7 +2,6 @@ import './sass/index.scss';
 import { mobileMenu } from './js/modile-menu';
 import initEmbla from './js/sliders';
 import { initTableScrollbar } from './js/scroll-bar';
-// import initCustomScrollbar from './js/scroll-bar';
 
 mobileMenu();
 
@@ -29,4 +28,3 @@ initEmbla({
   nextBtn: '.embla__btn--next-3',
 });
 initTableScrollbar();
-// document.querySelectorAll('.subscriptions').forEach(initCustomScrollbar);
