@@ -27,4 +27,12 @@ export const mobileMenu = () => {
     openMenuBtn.setAttribute('aria-expanded', false);
     enableBodyScroll(document.body);
   });
+  mobileMenu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+      e.target.blur();
+      mobileMenu.classList.remove('is-open');
+      openMenuBtn.setAttribute('aria-expanded', false);
+      enableBodyScroll(document.body);
+    }
+  });
 };
