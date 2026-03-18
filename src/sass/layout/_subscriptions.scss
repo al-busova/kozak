@@ -1,9 +1,9 @@
 .subscriptions {
-  // background-color: $white;
   color: $add-textcolor;
   padding: 80px 0;
-  // position: relative;
-  //  нужно сделать через псевдоэлементы!!
+  position: relative;
+  overflow: visible;
+  z-index: 2;
 }
 .subscriptions__thead-line {
   position: absolute;
@@ -16,6 +16,50 @@
   z-index: 100;
   overflow-x: hidden;
 }
+.subscriptions__scroll-wrapper {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    width: 100px;
+    height: 100px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 3;
+
+    @media screen and (min-width: 768px) {
+      bottom: -44px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  &:first-of-type::after {
+    right: calc((100vw - 100%) / -2);
+    background-image: url('../images/decor/frame_sub-right-min.png');
+    background-position: right bottom;
+
+    @media screen and (min-width: 768px) {
+      right: calc((100vw - 100%) / -2);
+    }
+  }
+
+  &:last-of-type::after {
+    left: calc((100vw - 100%) / -2);
+    background-image: url('../images/decor/frame_sub-left-min.png');
+    background-position: left bottom;
+
+    @media screen and (min-width: 768px) {
+      left: calc((100vw - 100%) / -2);
+      bottom: -100px;
+    }
+  }
+}
 .subscriptions__title-time {
   font-size: 20px;
   text-align: center;
@@ -24,16 +68,16 @@
   margin-bottom: 45px;
 }
 .subscriptions__table-scroll {
+  position: relative;
+  z-index: 1;
   overflow-x: auto;
+  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 15px;
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-  @media screen and (min-width: 1440px) {
-    overflow: visible;
   }
 }
 .subscriptions-scrollbar {
