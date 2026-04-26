@@ -48,6 +48,7 @@ export function initTableScrollbar() {
       update();
     });
 }
+
 // export function initTableScrollbar() {
 //   const wrappers = document.querySelectorAll('.subscriptions__scroll-wrapper');
 

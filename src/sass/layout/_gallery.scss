@@ -5,10 +5,12 @@
   background-position: left bottom -26px;
   background-size: 70px;
   background-repeat: no-repeat;
-  & .section-title {
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
+    & .section-title {
       margin-bottom: 60px;
     }
+    background-position: left bottom -35px;
+    background-size: 100px;
   }
 }
 

@@ -11,9 +11,13 @@
     margin-bottom: 50px;
   }
   @media screen and (min-width: 1440px) {
-    text-align: left;
+    // text-align: left;
   }
 }
 .section-title--dark {
   color: $add-textcolor;
+  margin-bottom: 0;
+}
+.section-title--left {
+  text-align: left;
 }

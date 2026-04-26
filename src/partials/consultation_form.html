@@ -1,4 +1,4 @@
-<section class="consultation">
+<section id="consultation" class="consultation">
   <div class="container">
     <form class="consultation__form">
       <h3 class="consultation__title">Залишились питання?</h3>
@@ -8,23 +8,29 @@
       <input
         class="consultation__input"
         type="text"
-        name=""
-        id=""
+        name="userName"
+        id="userName"
         placeholder="Введіть ім'я"
       />
       <input
         class="consultation__input"
         type="tel"
-        name=""
-        id=""
+        name="userTel"
+        id="userTel"
         placeholder="Введіть телефон"
       />
-      <button class="consultation__btn" type="submit">
+      <button class="consultation__btn" type="submit" disabled>
         <span>Отримати косультацію</span>
       </button>
       <p class="consultation__add-text">
         Натиснувши на кнопку ви погоджуєтеся з політикою конфіденційності
       </p>
     </form>
+    <div id="consultation__modal" class="consultation__modal hidden">
+      <div class="consultation__modal-content">
+        <span id="close">&times;</span>
+        <p id="modalText">text sfsf</p>
+      </div>
+    </div>
   </div>
 </section>

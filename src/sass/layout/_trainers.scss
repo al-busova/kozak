@@ -5,6 +5,10 @@
   background-position: left top 100px;
   background-size: 70px;
   background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    background-size: 140px;
+    background-position: left top;
+  }
 }
 
 .trainers__name {
