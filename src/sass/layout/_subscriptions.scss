@@ -4,13 +4,15 @@
   position: relative;
   overflow: visible;
   z-index: 2;
-  > .container {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    padding-left: 175px;
-    padding-right: 140px;
-    justify-content: center;
+  @media screen and (min-width: 1440px) {
+    > .container {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding-left: 175px;
+      padding-right: 140px;
+      justify-content: center;
+    }
   }
 }
 .subscriptions__thead-line {
@@ -87,6 +89,7 @@
   text-align: center;
   line-height: 1.5;
   margin-bottom: 45px;
+  margin-top: 60px;
 }
 .subscriptions__table-scroll {
   position: relative;

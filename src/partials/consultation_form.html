@@ -1,6 +1,6 @@
 <section id="consultation" class="consultation">
   <div class="container">
-    <form class="consultation__form">
+    <form class="consultation__form" autocomplete="off">
       <h3 class="consultation__title">Залишились питання?</h3>
       <p class="consultation__text">
         Залишіть номер телефону і ми <span>обов'язково з Вами зв'яжемося</span>
@@ -12,6 +12,7 @@
         id="userName"
         placeholder="Введіть ім'я"
       />
+      <span class="error" id="nameError"></span>
       <input
         class="consultation__input"
         type="tel"
@@ -19,17 +20,74 @@
         id="userTel"
         placeholder="Введіть телефон"
       />
-      <button class="consultation__btn" type="submit" disabled>
+      <span class="error" id="telError"></span>
+      <button class="consultation__btn" type="submit">
         <span>Отримати косультацію</span>
       </button>
       <p class="consultation__add-text">
         Натиснувши на кнопку ви погоджуєтеся з політикою конфіденційності
       </p>
     </form>
-    <div id="consultation__modal" class="consultation__modal hidden">
-      <div class="consultation__modal-content">
-        <span id="close">&times;</span>
-        <p id="modalText">text sfsf</p>
+    <div class="consultation__modal">
+      <div class="modal-content">
+        <div class="modal-content__top">
+          <a href="//index.html" lang="en" class="logo link"
+            ><img src="./images/favicon.png" alt="logo" /> Kozak</a
+          >
+          <button class="modal__btn-close js-close-menu" type="button">
+            <svg class="modal-content__icon" width="25" height="25">
+              <use href=".//images/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <svg class="modal-content__icon" width="32" height="24">
+            <use href=".//images/sprite.svg#icon-check"></use>
+          </svg>
+          <p id="modalText">Дані успішно надіслані!</p>
+        </div>
+        <div class="contacts__box">
+          <ul class="contacts__list list">
+            <li class="contacts__item">
+              <svg class="one-time__icon" width="24" height="24">
+                <use xlink:href=".//images/sprite.svg#icon-location-cont"></use>
+              </svg>
+              <a
+                class="contacts__text link"
+                href="https://maps.app.goo.gl/oR2SGcvU=k8sEFSV99"
+                >м. Запоріжжя, пр. Соборний 92</a
+              >
+            </li>
+            <li class="contacts__item">
+              <svg class="one-time__icon" width="24" height="24">
+                <use xlink:href=".//images/sprite.svg#icon-clock"></use>
+              </svg>
+              <p class="contacts__text">Щодня з 8:00 до 23:00</p>
+            </li>
+          </ul>
+          <p class="contacts__text-sing">Підписуйтесь на наші соц. мережі</p>
+          <ul class="list soc-links">
+            <li class="soc-links__item">
+              <a
+                class="soc-links__link link"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <svg class="soc-links__icon--accent" width="22" height="22">
+                  <use href=".//images/sprite.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="soc-links__item">
+              <a
+                class="soc-links__link link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                ><svg class="soc-links__icon--accent" width="22" height="22">
+                  <use href=".//images/sprite.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
