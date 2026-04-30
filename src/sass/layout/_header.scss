@@ -70,3 +70,12 @@
 .modal__btn-close {
   @extend .btn-menu;
 }
+.modal-content__top {
+  margin-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    .modal__btn-close {
+      display: block;
+    }
+  }
+}

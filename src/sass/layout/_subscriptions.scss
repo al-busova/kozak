@@ -28,43 +28,43 @@
 }
 .subscriptions__scroll-wrapper {
   position: relative;
-  overflow: visible;
   z-index: 1;
-
   &::after {
     content: '';
     position: absolute;
-    bottom: -30px;
     width: 100px;
     height: 125px;
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 10;
-
     @media screen and (min-width: 768px) {
-      bottom: -44px;
-      width: 150px;
-      height: 150px;
-    }
-    @media screen and (min-width: 768px) {
-      bottom: -44px;
       width: 200px;
       height: 230px;
     }
+    @media screen and (min-width: 1440px) {
+      width: 380px;
+      height: 270px;
+    }
   }
 
-  // &:first-of-type::after {
-  //   right: -15px;
-  //   bottom: -65px;
-  //   background-image: url('../images/decor/frame_sub-right-min.png');
-  //   background-position: right bottom;
-  //   background-size: 50px;
-  //   @media screen and (min-width: 768px) {
-  //     right: calc((100vw - 100%) / -2);
-  //     bottom: -85px;
-  //     background-size: 60px;
-  //   }
-  // }
+  &:first-of-type::after {
+    right: -15px;
+    bottom: -65px;
+    background-image: url('../images/decor/frame_sub-right-min.png');
+    background-position: right bottom;
+    background-size: 50px;
+    @media screen and (min-width: 768px) {
+      right: 50%;
+      transform: translateX(49vw);
+      bottom: -85px;
+      background-size: 65px;
+    }
+    @media screen and (min-width: 1440px) {
+      bottom: -130px;
+      background-size: 150px;
+      transform: translateX(48vw);
+    }
+  }
 
   &:last-of-type::after {
     left: calc((100vw - 100%) / -2);
@@ -73,23 +73,30 @@
     background-size: 60px;
     bottom: -50px;
     @media screen and (min-width: 768px) {
-      left: -45px;
+      left: 50%;
+      transform: translateX(-49vw);
       bottom: -135px;
       background-size: 135px;
     }
     @media screen and (min-width: 1440px) {
-      left: -70px;
-      bottom: -180px;
-      background-size: 170px;
+      bottom: -160px;
+      transform: translateX(-52vw);
+      background-size: 200px;
     }
   }
 }
+
 .subscriptions__title-time {
   font-size: 20px;
   text-align: center;
   line-height: 1.5;
   margin-bottom: 45px;
   margin-top: 60px;
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+
+    line-height: 1.25;
+  }
 }
 .subscriptions__table-scroll {
   position: relative;

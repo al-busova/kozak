@@ -21,3 +21,10 @@
   fill: $accent-color;
   transition: fill 300ms $timing-fun;
 }
+.modal-content {
+  @media screen and (min-width: 768px) {
+    .soc-links {
+      justify-content: center;
+    }
+  }
+}

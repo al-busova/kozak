@@ -47,9 +47,7 @@
   width: 100%;
   padding-bottom: 15px;
   color: white;
-  &:first-of-type {
-    margin-bottom: 25px;
-  }
+  margin-bottom: 10px;
   &::placeholder {
     font-size: 15px;
     line-height: 1.33;
@@ -108,6 +106,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 10;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -120,15 +119,20 @@
 
 .modal-content {
   background: black;
-  padding: 20px;
-  margin: 100px auto;
-  width: 300px;
-  position: relative;
-  transform: translateY(-20px);
+  padding: 30px 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  // max-width: 650px;
+  transform: translate(-50%, -50%) scale(0.5);
   transition: transform 0.3s ease;
+  @media screen and (min-width: 768px) {
+    padding: 50px 30px;
+  }
 }
 .consultation__modal.open .modal-content {
-  transform: translateY(0);
+  transform: translate(-50%, -50%) scale(1);
 }
 body.no-scroll {
   overflow: hidden;
@@ -139,4 +143,40 @@ body.no-scroll {
   font-size: 12px;
   display: block;
   height: 14px;
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
+}
+.modal__text-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  > p {
+    max-width: 140px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 30px;
+    margin-bottom: 30px;
+    > p {
+      max-width: none;
+      font-size: 30px;
+      line-height: 1.13333;
+    }
+  }
+}
+.modal__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 }
