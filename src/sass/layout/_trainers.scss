@@ -1,3 +1,4 @@
+@use '../utils' as *;
 .trainers {
   padding: 80px 0;
   background-color: $add-textcolor;
@@ -16,7 +17,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
-  color: #fff;
+  color: $white;
   margin: 20px 0 15px;
 }
 .trainers__post,

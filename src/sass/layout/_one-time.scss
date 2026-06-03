@@ -1,3 +1,4 @@
+@use '../utils' as *;
 .one-time {
   color: $add-textcolor;
   padding-bottom: 80px;
@@ -39,8 +40,9 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-
+  min-width: 100%;
   @media screen and (min-width: 768px) {
+    min-width: auto;
     @include flex-basis(30px, 3);
     padding: 30px 14px;
     &:hover {

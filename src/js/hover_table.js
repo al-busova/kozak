@@ -11,19 +11,16 @@ export function hoverInTable() {
 
       const row = cell.parentElement;
       const cellIndex = cell.cellIndex;
-
-      // 🔹 очищаємо попередні активні
+      // очищаємо попередні активні
       if (activeRowHeader) activeRowHeader.classList.remove('is-active');
       if (activeColHeader) activeColHeader.classList.remove('is-active');
-
-      // 🔹 новий row header
+      // новий row header
       const rowHeader = row.querySelector('th');
       if (rowHeader) {
         rowHeader.classList.add('is-active');
         activeRowHeader = rowHeader;
       }
-
-      // 🔹 новий col header
+      // новий col header
       const colHeader = table.querySelector(
         `thead th:nth-child(${cellIndex + 1})`
       );

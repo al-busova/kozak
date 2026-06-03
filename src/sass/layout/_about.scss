@@ -1,3 +1,4 @@
+@use '../utils' as *;
 .about {
   padding: 90px 0 80px;
   background-color: $add-textcolor;
@@ -19,11 +20,7 @@
   }
 }
 .about__text {
-  font-family: $primary-font-family;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.63;
-  color: $white;
   margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     text-align: center;
@@ -31,40 +28,6 @@
   @media screen and (min-width: 1440px) {
     text-align: left;
   }
-}
-.about__btn {
-  display: block;
-  padding: 20px 33px;
-  width: 100%;
-  font-family: $primary-font-family;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  color: $white;
-  background-color: transparent;
-  border: none;
-  position: relative;
-  margin-bottom: 40px;
-  @media screen and (min-width: 768px) {
-    width: 280px;
-    margin: 0 auto 60px;
-  }
-  @media screen and (min-width: 1440px) {
-    margin: 0;
-  }
-}
-.about__btn::before {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 47%;
-  content: '';
-  width: 95%;
-  height: 95%;
-  border: 1px solid $white;
-  transform: skewX(-15deg) translate(-50%, -47%);
 }
 .about__wrapper-images {
   @include flex(30px, column, center);
@@ -120,7 +83,6 @@
   }
 }
 .advantages__text {
-  font-family: $primary-font-family;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.56;

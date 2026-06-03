@@ -1,3 +1,4 @@
+@use '../utils' as *;
 .consultation {
   padding: 80px 0;
   background-image: url('../images/bg/contacts-form_mob.jpg');
@@ -43,10 +44,10 @@
 .consultation__input {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $white;
   width: 100%;
   padding-bottom: 15px;
-  color: white;
+  color: $white;
   margin-bottom: 10px;
   &::placeholder {
     font-size: 15px;
@@ -62,35 +63,6 @@
   &:hover::placeholder,
   &:focus::placeholder,
   &:active::placeholder {
-    color: $accent-color;
-  }
-}
-.consultation__btn {
-  display: block;
-  margin: 0 auto;
-  font-weight: 700;
-  line-height: 1.25;
-  color: $white;
-  background-color: transparent;
-  border: none;
-  padding: 15px 40px;
-  outline: 1px solid $white;
-  outline-offset: -2px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  transform: skewX(-15deg);
-  transition:
-    color 0.3s,
-    background-color 0.3s,
-    outline-color 300ms;
-  span {
-    display: inline-block;
-    transform: skewX(15deg);
-  }
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    outline-color: $accent-color;
     color: $accent-color;
   }
 }
@@ -124,7 +96,6 @@
   top: 50%;
   left: 50%;
   width: 90%;
-  // max-width: 650px;
   transform: translate(-50%, -50%) scale(0.5);
   transition: transform 0.3s ease;
   @media screen and (min-width: 768px) {

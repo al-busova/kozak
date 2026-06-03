@@ -6,7 +6,7 @@ function initEmbla({ viewport, track, thumb, prevBtn, nextBtn }) {
   const thumbEl = document.querySelector(thumb);
   const prevBtnEl = prevBtn ? document.querySelector(prevBtn) : null;
   const nextBtnEl = nextBtn ? document.querySelector(nextBtn) : null;
-  // trackEl.offsetWidth === 0;
+
   if (!viewportEl || !trackEl || !thumbEl) return;
 
   const embla = EmblaCarousel(viewportEl, {
@@ -125,57 +125,3 @@ function initEmbla({ viewport, track, thumb, prevBtn, nextBtn }) {
 }
 
 export default initEmbla;
-
-// import Siema from 'siema';
-
-// const slider = new Siema({
-//   selector: '.siema',
-//   duration: 300,
-//   easing: 'ease-out',
-//   perPage: 1,
-//   draggable: true,
-//   multipleDrag: true,
-//   threshold: 20,
-//   loop: false,
-//   onChange: () => {
-//     // принудительный snap
-//     slider.goTo(slider.currentSlide);
-//   },
-// });
-
-// let isWheeling = false;
-
-// const onWheel = e => {
-//   const atStart = slider.currentSlide === 0;
-//   const atEnd = slider.currentSlide === slider.innerElements.length - 1;
-
-//   // если на краю — отдать scroll странице
-//   if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) {
-//     return;
-//   }
-
-//   e.preventDefault();
-
-//   if (isWheeling) return;
-//   isWheeling = true;
-
-//   if (e.deltaY > 0) {
-//     slider.next();
-//   } else {
-//     slider.prev();
-//   }
-
-//   setTimeout(() => {
-//     isWheeling = false;
-//   }, 350);
-// };
-
-// slider.selector.addEventListener('wheel', onWheel, {
-//   passive: false, // ❗ обязательно
-// });
-
-// slider.onChange = () => {
-//   if (slider.currentSlide === slider.innerElements.length - 2) {
-//     slider.prev();
-//   }
-// };

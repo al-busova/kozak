@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+.consultation__btn {
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  padding: 15px 40px;
+  outline: 1px solid $white;
+  outline-offset: -2px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transform: skewX(-15deg);
+  transition:
+    color 0.3s,
+    background-color 0.3s,
+    outline-color 300ms;
+  span {
+    display: inline-block;
+    transform: skewX(15deg);
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline-color: $accent-color;
+    color: $accent-color;
+  }
+}
+.about__btn {
+  padding: 20px 33px;
+  width: 100%;
+  text-decoration: none;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    margin: 0 auto 60px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+  }
+}

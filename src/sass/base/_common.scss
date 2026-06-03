@@ -1,4 +1,6 @@
+@use '../utils' as *;
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,9 +10,6 @@ body {
   font-size: $primary-font-size;
   color: $white;
 }
-// * {
-//   outline: 1px solid red;
-// }
 
 h1,
 h2,

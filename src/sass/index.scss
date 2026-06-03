@@ -1,22 +1,4 @@
-@import './utils/variables';
-@import './utils/visually-hidden';
-@import './utils/mixins';
-
-@import './base/common';
-@import './base/container';
-
-@import './components/logo';
-@import './components/soc-links';
-@import './components/section-title';
-@import './components/navigation';
-
-@import './layout/header';
-@import './layout/hero';
-@import './layout/about';
-@import './layout/gallery';
-@import './layout/subscriptions';
-@import './layout/one-time';
-@import './layout/trainers';
-@import './layout/consultation__form';
-@import './layout/contacts';
-@import './layout/footer';
+@use './utils';
+@use './base';
+@use './components';
+@use './layout';

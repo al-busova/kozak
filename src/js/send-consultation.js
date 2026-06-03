@@ -34,7 +34,7 @@ export function initForm({ onSuccess }) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const isValid = validate(true); // 🔥 показуємо помилки
+    const isValid = validate(true);
 
     if (!isValid) return;
 

@@ -1,3 +1,4 @@
+@use '../utils' as *;
 .header {
   padding-top: 30px;
   position: relative;
@@ -18,7 +19,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  transition: transform 250ms var(--timing-fun);
+  transition: transform 250ms ease;
   &:hover,
   &:focus {
     transform: scale(1.1);
@@ -33,13 +34,18 @@
 }
 .container_mobile {
   @media screen and (max-width: 767px) {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     padding-top: 30px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
   @media screen and (max-width: 1439px) and (min-width: 768px) {
     order: 1;
@@ -50,8 +56,10 @@
 }
 
 .container_mobile.is-open {
-  display: block;
   backdrop-filter: blur(3px);
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
   & ~ .btn-menu {
     display: none;
   }
